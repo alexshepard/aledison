@@ -58,3 +58,4 @@ target/
 
 # custom aledison
 config.yml
+*.pkl
