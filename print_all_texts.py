@@ -20,7 +20,7 @@ def name_or_number(number):
 		return number
 
 messages = twilio_client.messages.list()
-for message in twilio_client.messages.list():
+for message in reversed(twilio_client.messages.list()):
 	print("From: " + name_or_number(message.from_.encode("utf-8")))
 	print("To: " + name_or_number(message.to.encode("utf-8")))
 	print("Body: " + message.body.encode("utf-8"))
