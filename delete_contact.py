@@ -10,15 +10,15 @@ c = Contacts()
 import sys
 
 if len(sys.argv) < 2:
-	print("usage: delete_contact.py <name>")
-	sys.exit()
+  print("usage: delete_contact.py <name>")
+  sys.exit()
 
 script_name = sys.argv.pop(0)
 name = sys.argv.pop(0)
 
 contact = c.find_contact_by_name(name)
 if contact:
-	c.delete_contact(contact)
+  c.delete_contact(contact)
 else:
-	print("no contact named " + name)
-	sys.exit()
+  print("no contact named " + name)
+  sys.exit()

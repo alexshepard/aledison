@@ -10,7 +10,7 @@ c = Contacts()
 import sys
 
 for contact in c.get_contacts():
-	print("Name: " + contact.name)
-	print("Number: " + contact.number)
-	print
+  print("Name: " + contact.name)
+  print("Number: " + contact.number)
+  print
 

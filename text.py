@@ -21,15 +21,15 @@ msg = " ".join([str(x) for x in sys.argv])
 
 contact = c.find_contact_by_name(name)
 if contact:
-	print("from " + str(twilio_from_number))
-	message = twilio_client.messages.create(
-		body=msg, 
-		from_=twilio_from_number,
-		to=contact.number 
-	)
+  print("from " + str(twilio_from_number))
+  message = twilio_client.messages.create(
+    body=msg, 
+    from_=twilio_from_number,
+    to=contact.number 
+  )
 
-	print("message is " + message.sid)
+  print("message is " + message.sid)
 else:
-	print("couldn't find contact '" + name + "'")
+  print("couldn't find contact '" + name + "'")
 
 
