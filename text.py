@@ -20,7 +20,7 @@ name = sys.argv.pop(0)
 msg = " ".join([str(x) for x in sys.argv])
 
 contact = c.find_contact_by_name(name)
-if contact:
+if contact and msg:
   print("from " + str(twilio_from_number))
   message = twilio_client.messages.create(
     body=msg, 
@@ -30,6 +30,6 @@ if contact:
 
   print("message is " + message.sid)
 else:
-  print("couldn't find contact '" + name + "'")
+  print("couldn't find contact '" + name + "' or empty message")
 
 
