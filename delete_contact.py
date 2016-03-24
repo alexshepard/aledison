@@ -6,7 +6,6 @@ config = yaml.safe_load(open("config.yml"))
 from contacts import Contacts, Contact
 c = Contacts()
 
-# syntax: add_contact.py <name> <number>
 import sys
 
 if len(sys.argv) < 2:
